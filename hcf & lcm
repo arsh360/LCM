@@ -1,0 +1,21 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println(LCM(15,20));
+    }
+
+    static int GDC (int a, int b){
+        if (a==0){
+            return b;
+        }else{
+            return (GDC(b%a,a));
+        }
+    }
+
+    static int LCM (int a, int b){
+        return a*b/GDC(a, b);
+    }
+}
